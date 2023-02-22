@@ -31,6 +31,7 @@ func main() {
 	iarr := []string{"a","b","c","d","e"}
 	fmt.Println("iarr:", iarr)
 	fmt.Println("iarr[2:4]:", iarr[2:4])
+	fmt.Println("iarr[0:1]:", iarr[0:1])
 
 	twoD := make([][]int, 3)
 	fmt.Println("twoD:", twoD)
@@ -39,4 +40,13 @@ func main() {
 	}
 	fmt.Println("twoD:", twoD)
 
+	subi := iarr[2:4]
+	subi[0] = "x"
+	fmt.Println("iarr:", iarr)
+	fmt.Println("subi:", subi)
+	fmt.Println("len(subi):", len(subi))
+	fmt.Println("cap(subi):", cap(subi))
+	subi[2] = "y"
+
+	//fmt.Println("iarr[-1:]", iarr[-1:])
 }
