@@ -15,6 +15,8 @@ func f(from string) {
 	}
 }
 
+
+
 func main() {
 	go f("goroutine1")
 	go f("goroutine2")
