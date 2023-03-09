@@ -8,8 +8,9 @@ import (
 )
 
 func worker(id int) {
-	fmt.Println("Worker ", id, " starting")
-	time.Sleep(time.Duration(rand.Intn(4)) * time.Second)
+	t := rand.Intn(4)
+	fmt.Println("Worker ", id, " starting, will take ", t, "sec")
+	time.Sleep(time.Duration(t) * time.Second)
 	fmt.Println("Worker ", id, "done")
 }
 
