@@ -38,16 +38,24 @@ func main() {
 	my_obj := closure_point()
 
 	my_obj["set"].(func(int, int)bool)(1, 2)
+	fmt.Print("my_obj set at: "); 
 	fmt.Println(my_obj["get"].(func() (int,int))())
+
 	my_obj["move"].(func())()
+	fmt.Print("my_obj after move: ")
 	fmt.Println(my_obj["get"].(func() (int,int))())
 
 
 	new_obj_container := build_closure_point()
 	new_obj := new_obj_container()
-	fmt.Println(new_obj["get"].(func() (int,int))())
-	new_obj["move"].(func())()
+	fmt.Print("new_obj created at: ")
 	fmt.Println(new_obj["get"].(func() (int,int))())
 
+	new_obj["move"].(func())()
+	fmt.Print("new_obj after move: ")
+	fmt.Println(new_obj["get"].(func() (int,int))())
+
+
+	fmt.Print("my_obj is at: ")
 	fmt.Println(my_obj["get"].(func() (int,int))())
 }
