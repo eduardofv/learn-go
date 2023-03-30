@@ -14,5 +14,4 @@ func main() {
 	v = "hello"
 	fmt.Println(v)
 
-	fmt.Println(v.(type))
 }
