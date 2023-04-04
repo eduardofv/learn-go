@@ -49,6 +49,8 @@ func Same(t1, t2 *tree.Tree) bool {
 func main() {
 	ch := make(chan int, 10)
 	
+	t := tree.New(1)
+	fmt.Println("Tree: ", t.String())
 	go Walk(tree.New(1), ch)
 	defer close(ch)
 	
